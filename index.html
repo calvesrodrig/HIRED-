@@ -91,6 +91,7 @@
             <header class="main-header">
                 <div class="main-header-content">
                     <h1 class="hired-title">Hired!</h1>
+                    <h2 id="h2async"></h2>
                     <p class="main-header-p">Hired! is the <b>largest remote work community in the world.</b>
                         With over 2.5M monthly
                         visitors, H! is the #1 destination to find and list incredible remote jobs.</p>
@@ -302,36 +303,9 @@
 
         </div>
     </div>
-    <script>
-        var $searchBtn = document.getElementById("searchBtn");
-        var $navHeader = document.getElementById("navHeader");
-        var openSearch = -1;
-        console.log(openSearch)
-        function showSearchBar(){
-            
-            var $searchBar = document.getElementById("searchBar");
-            if(openSearch == -1){
-                $searchBar.style.opacity = "1";
-                $searchBar.style.visibility = "visible";
-            }else if(openSearch == 1){
-                $searchBar.style.opacity = "0";
-                $searchBar.style.visibility = "hidden";
-            }
-            openSearch *= -1;
-            return openSearch;
-        }
-
-        function changeNavShadow() {
-            var bodyElement = document.querySelector("body");
-            if (this.scrollY > 2) {
-                $navHeader.style.boxShadow = "0px 0px 5px 1px rgb(0, 0, 0, 0.25)";
-            }
-            if (this.scrollY == 0) {
-                $navHeader.style.boxShadow = "0px 0px 0px 0px rgb(0, 0, 0, 0.25)";
-            }
-        }
-        window.addEventListener("scroll", changeNavShadow, false);
-        $searchBtn.addEventListener("click", showSearchBar);
+    
+    <script src="script.js">
+        
     </script>
 </body>
 
