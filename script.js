@@ -7,9 +7,13 @@ function showSearchBar() {
     if (openSearch == -1) {
         $searchBar.style.opacity = "1";
         $searchBar.style.visibility = "visible";
+        $navHeader.style.boxShadow = "0px 0px 0px 0px rgb(0, 0, 0, 0)";
+
     } else if (openSearch == 1) {
         $searchBar.style.opacity = "0";
         $searchBar.style.visibility = "hidden";
+        $navHeader.style.boxShadow = "0px 0px 5px 1px rgb(0, 0, 0, 0.25)";
+
     }
     openSearch *= -1;
     return openSearch;
@@ -27,6 +31,3 @@ function changeNavShadow() {
 }
 window.addEventListener("scroll", changeNavShadow, false);
 $searchBtn.addEventListener("click", showSearchBar);
-
-//var myDate = new Date();
-//$h2.innerHTML = myDate.getFullYear() + ", " + myDate.getDate() + " " + myDate.getMonth();
